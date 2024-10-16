@@ -2,7 +2,7 @@ import React from 'react'
 
 function Pagination({ totalPages, currentPage, onPageChange }) {
   return (
-    <div>
+    <div className="flex justify-center mt-4">
       {Array.from({length: totalPages}, (_, i) => (
         <button
           key={i}

@@ -22,10 +22,10 @@ function MovieDetail() {
     if(loading) return <p>Loading....</p>
 
   return (
-    <div>
-        <h2>{movie.title}</h2>
+    <div className="p-4">
+        <h2 className="text-2xl font-bold">{movie.title}</h2>
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full h-auto" />
-        <p>{movie.overview}</p>
+        <p className="mt-2">{movie.overview}</p>
     </div>
   );
 };
