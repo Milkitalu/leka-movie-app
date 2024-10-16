@@ -5,7 +5,7 @@ function MovieCard({movie}) {
   return (
     <div className='p-4'>
         <div>
-            <Link to={`/movie/%{movie.id}`}>
+            <Link to={`/movie/${movie.id}`}>
                <img
                   className='' 
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
