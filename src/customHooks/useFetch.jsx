@@ -1,9 +1,10 @@
+
 import {useState, useEffect} from "react";
 import axios from 'axios';
 
 function useFetch(url) {
     //definition of state variables used to hook data fetching, loading, and error status
-    const[data, setData] = useState([]); //used to save movie data fetched from API
+    const[data, setData] = useState({ results: [], total_pages: 0 }); //used to save movie data fetched from API
     const [loading, setLoading] = useState(true); // sets initial fetching condition to true
     const [error, setError] =useState(null);
 
@@ -12,7 +13,7 @@ function useFetch(url) {
             try {
                 const res = await axios.get(url);  // res capture result of data query from specified url.
                 setData(res.data);
-                console.log(res);
+                /* console.log(res); */
                 
             } catch (error) {
                 setError(error);
