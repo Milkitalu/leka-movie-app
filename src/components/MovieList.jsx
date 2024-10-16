@@ -22,7 +22,7 @@ function MovieList({category}) {
                 <MovieCard key = {movie.id} movie={movie} />
             ))}
         </div>
-        <Pagination totalPages={totalPages} currentPage={currentPage} inPageChange={setCurrentPage} />
+        <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
     </div>
   );
 };
